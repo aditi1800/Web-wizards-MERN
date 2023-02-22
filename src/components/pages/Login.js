@@ -7,9 +7,7 @@ const Login = () => {
   //   const clickHandler = () => {
   //     setSignin(!isSignin);
   //   };
-  const clickHandler = () => {
-    setSignin(true);
-  };
+
   return (
     <>
       <div className="form-container-login">
@@ -22,7 +20,7 @@ const Login = () => {
           </button>
         </div>
         <div className="inner">
-          {isSignin ? <Signin /> : <Signup clickHandler={clickHandler} />}
+          {isSignin ? <Signin /> : <Signup setSignin={setSignin} />}
         </div>
       </div>
     </>

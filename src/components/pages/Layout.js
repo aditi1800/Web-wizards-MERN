@@ -1,5 +1,5 @@
-import { Outlet, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import "./Layout.css";
 const Layout = () => {
   return (
     <>
@@ -30,7 +30,10 @@ const Layout = () => {
                     <li className="active">
                       <Link to="/">Home</Link>
                     </li>
-                    <li className="has-children">
+                    <li className="active">
+                      <Link to="/events">Events</Link>
+                    </li>
+                    {/* <li className="has-children">
                       <a href="/">Events</a>
                       <ul className="dropdown">
                         <li>
@@ -40,7 +43,7 @@ const Layout = () => {
                           <Link to="/virtualEvent">Virtual</Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link to="/about">About</Link>
                     </li>
@@ -57,15 +60,14 @@ const Layout = () => {
                     <span></span>
                   </a>
 
-                  <Link
-                    to="/login"
-                    className="call-us d-flex align-items-center"
-                  >
+                  <Link to="/login">
                     <button
                       type="button"
-                      className="btn btn-sm btn-warning pull-right registerButton"
+                      className="call-us d-flex align-items-center btn btn-sm btn-warning pull-right registerButton"
                     >
-                      <Link to="/login"> Login/Register</Link>
+                      <Link style={{ color: "black" }} to="/login">
+                        Login/Register
+                      </Link>
                     </button>
                   </Link>
                 </div>
@@ -74,7 +76,6 @@ const Layout = () => {
           </div>
         </div>
       </nav>
-      <Outlet />
     </>
   );
 };

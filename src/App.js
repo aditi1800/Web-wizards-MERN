@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/pages/Layout";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+
 import Home from "./components/pages/Home";
 import PhysicalEvent from "./components/pages/PhysicalEvent";
-import VirtualEvent from "./components/pages/VirtualEvent";
+
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import NoPage from "./components/pages/NoPage";
@@ -13,16 +13,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route exact path="/physicalEvent" element={<PhysicalEvent />} />
-          <Route exact path="/virtualEvent" element={<VirtualEvent />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="*" element={<NoPage />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route exact path="/events" element={<PhysicalEvent />} />
+
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="*" element={<NoPage />} />
       </Routes>
+      <Outlet />
     </BrowserRouter>
   );
 }

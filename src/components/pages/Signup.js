@@ -27,42 +27,42 @@ const Signup = (props) => {
 
   const PostData = async (e) => {
     e.preventDefault();
+    props.setSignin(true);
+    // const { name, email, phone, password, cpassword } = user;
 
-    const { name, email, phone, password, cpassword } = user;
+    // const res = await fetch("/register", {
+    //   method: "POST",
 
-    const res = await fetch("/register", {
-      method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
 
-      headers: {
-        "Content-Type": "application/json",
-      },
+    //   body: JSON.stringify({
+    //     name,
 
-      body: JSON.stringify({
-        name,
+    //     email,
 
-        email,
+    //     phone,
 
-        phone,
+    //     password,
 
-        password,
+    //     cpassword,
+    //   }),
+    // });
 
-        cpassword,
-      }),
-    });
+    // const data = await res.json();
 
-    const data = await res.json();
+    // if (data.status === 422 || !data) {
+    //   window.alert("Invalid Registration");
 
-    if (data.status === 422 || !data) {
-      window.alert("Invalid Registration");
+    //   console.log("Invalid Registration");
+    // } else {
+    //   window.alert("Registration Successful");
 
-      console.log("Invalid Registration");
-    } else {
-      window.alert("Registration Successful");
+    //   console.log("Registration Successful");
 
-      console.log("Registration Successful");
-
-      //history.pushState("")
-    }
+    //   //history.pushState("")
+    // }
   };
   return (
     <>

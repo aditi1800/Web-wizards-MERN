@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import Layout from "./Layout";
 import Footer from "../Footer";
-import MainFooter from "../MainFooter";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./About.css";
@@ -10,6 +11,7 @@ const About = () => {
   }, []);
   return (
     <>
+      <Layout />
       <div className="hero overlay aboutOverlay">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -92,165 +94,237 @@ const About = () => {
             data-aos-delay="100"
           >
             <div className="features-slider" id="features-slider">
-              <div className="item">
-                <div className="feature bg-color-1">
-                  <img
-                    src="images/person_1.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+              <div className="row">
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-1">
+                      <img
+                        src="images/person_1.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">James Scott</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">James Scott</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="item">
-                <div className="feature bg-color-2">
-                  <img
-                    src="images/person_2.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-2">
+                      <img
+                        src="images/person_2.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">Hannah White</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">Hannah White</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="item">
-                <div className="feature bg-color-3">
-                  <img
-                    src="images/person_3.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">Amy Perez</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="item">
-                <div className="feature bg-color-4">
-                  <img
-                    src="images/person_4.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">Brian Nance</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="item">
-                <div className="feature bg-color-5">
-                  <img
-                    src="images/person_2.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">Stephanie Kenney</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="item">
-                <div className="feature bg-color-6">
-                  <img
-                    src="images/person_3.jpg"
-                    alt="Load"
-                    className="img-fluid w-50 rounded-circle mb-4"
-                  />
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
 
-                  <h3 className="mb-0">Amy Perez</h3>
-                  <span className="text-black-50 mb-3 d-block">
-                    CEO, Co-Founder
-                  </span>
-                  <p className="text-black-50">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts.
-                  </p>
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                    className="more d-block"
-                  >
-                    Learn More
-                  </a>
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
+
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
+
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-md-3 mb-3">
+                  <div className="item">
+                    <div className="feature bg-color-3">
+                      <img
+                        src="images/person_3.jpg"
+                        alt="Load"
+                        className="img-fluid w-50 rounded-circle mb-4"
+                      />
+
+                      <h3 className="mb-0">Amy Perez</h3>
+                      <span className="text-black-50 mb-3 d-block">
+                        CEO, Co-Founder
+                      </span>
+                      <p className="text-black-50">
+                        Far far away, behind the word mountains, far from the
+                        countries Vokalia and Consonantia, there live the blind
+                        texts.
+                      </p>
+
+                      <a
+                        href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                        className="more d-block"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -317,131 +391,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <div className="section sec-instagram pb-0">
-        <div className="container mb-5">
-          <div className="row align-items-center">
-            <div className="col-lg-3" data-aos="fade-up">
-              <span className="subheading mb-3">Instagram</span>
-              <h2 className="heading">We Are In Instagram</h2>
-            </div>
-            <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Temporibus, aperiam sint voluptatum? Molestiae debitis, ipsum,
-                rem ipsa voluptatum cupiditate quaerat!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="instagram-slider-wrap"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div className="instagram-slider" id="instagram-slider">
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_8-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_2-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_3-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_4-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_5-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_6-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_7-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <MainFooter />
 
       <Footer />
     </>

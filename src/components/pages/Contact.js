@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import Layout from "./Layout";
 import Footer from "../Footer";
-import MainFooter from "../MainFooter";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Contact.css";
@@ -10,6 +11,7 @@ const Contact = () => {
   }, []);
   return (
     <>
+      <Layout />
       <div className="hero overlay contactOverlay">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -154,130 +156,6 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="section sec-instagram pb-0">
-        <div className="container mb-5">
-          <div className="row align-items-center">
-            <div className="col-lg-3" data-aos="fade-up">
-              <span className="subheading mb-3">Instagram</span>
-              <h2 className="heading">We Are In Instagram</h2>
-            </div>
-            <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Temporibus, aperiam sint voluptatum? Molestiae debitis, ipsum,
-                rem ipsa voluptatum cupiditate quaerat!
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="instagram-slider-wrap"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div className="instagram-slider" id="instagram-slider">
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_8-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_2-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_3-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_4-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_5-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_6-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-
-            <div className="item">
-              <a
-                href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                className="instagram-item"
-              >
-                <span className="icon-instagram"></span>
-                <img
-                  src="images/img_v_7-min.jpg"
-                  alt="Load"
-                  className="img-fluid"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <MainFooter />
       <Footer />
     </>
   );

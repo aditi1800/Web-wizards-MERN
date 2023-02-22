@@ -16,9 +16,7 @@ const PhysicalEvent = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 text-center mx-auto">
-              <span className="subheading-white text-white mb-5">
-                Physical Events
-              </span>
+              <span className="subheading-white text-white mb-5">Events</span>
 
               <p
                 data-aos="fade-up"

@@ -33,6 +33,9 @@ const Layout = () => {
                     <li className="active">
                       <Link to="/events">Events</Link>
                     </li>
+                    <li className="active">
+                      <Link to="/registerEvent">RegisterEvent</Link>
+                    </li>
                     {/* <li className="has-children">
                       <a href="/">Events</a>
                       <ul className="dropdown">

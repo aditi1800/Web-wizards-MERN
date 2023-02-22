@@ -57,17 +57,17 @@ const Layout = () => {
                     <span></span>
                   </a>
 
-                  <a
-                    href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                  <Link
+                    to="/login"
                     className="call-us d-flex align-items-center"
                   >
                     <button
                       type="button"
                       className="btn btn-sm btn-warning pull-right registerButton"
                     >
-                      Login/Register
+                      <Link to="/login"> Login/Register</Link>
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

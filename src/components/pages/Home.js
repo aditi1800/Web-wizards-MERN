@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Layout from "./Layout";
 import Footer from "../Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <>
       <div>
+        <Layout />
         <div className="hero overlay homeOverlay">
           <div className="container">
             <div className="row align-items-center justify-content-between">

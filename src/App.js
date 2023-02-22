@@ -6,6 +6,7 @@ import VirtualEvent from "./components/pages/VirtualEvent";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import NoPage from "./components/pages/NoPage";
+import Login from "./components/pages/Login";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/virtualEvent" element={<VirtualEvent />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="*" element={<NoPage />} />
         </Route>
       </Routes>

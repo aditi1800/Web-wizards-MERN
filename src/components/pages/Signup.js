@@ -27,42 +27,46 @@ const Signup = (props) => {
 
   const PostData = async (e) => {
     e.preventDefault();
-    props.setSignin(true);
-    // const { name, email, phone, password, cpassword } = user;
 
-    // const res = await fetch("/register", {
-    //   method: "POST",
+    const { name, email, phone, password, cpassword, bu, gender, empId } = user;
 
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
+    const res = await fetch("/register", {
+      method: "POST",
 
-    //   body: JSON.stringify({
-    //     name,
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-    //     email,
+      body: JSON.stringify({
+        name,
 
-    //     phone,
+        email,
 
-    //     password,
+        phone,
 
-    //     cpassword,
-    //   }),
-    // });
+        password,
 
-    // const data = await res.json();
+        cpassword,
+        bu,
+        gender,
+        empId,
+      }),
+    });
 
-    // if (data.status === 422 || !data) {
-    //   window.alert("Invalid Registration");
+    const data = await res.json();
 
-    //   console.log("Invalid Registration");
-    // } else {
-    //   window.alert("Registration Successful");
+    if (data.status === 422 || !data) {
+      window.alert("Invalid Registration");
 
-    //   console.log("Registration Successful");
+      console.log("Invalid Registration");
+    } else {
+      window.alert("Registration Successful");
 
-    //   //history.pushState("")
-    // }
+      console.log("Registration Successful");
+      props.setSignin(true);
+
+      //history.pushState("")
+    }
   };
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
 import Footer from "../Footer";
 
@@ -9,6 +9,55 @@ const Contact = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const [contactDetails, setContactDetails] = useState({
+    name: "",
+    email: "",
+    msg: "",
+  });
+  let name, value;
+
+  const handlerInputs = (e) => {
+    name = e.target.name;
+
+    value = e.target.value;
+
+    setContactDetails({ ...contactDetails, [name]: value });
+  };
+
+  const PostData = async (e) => {
+    e.preventDefault();
+
+    const { name, email, msg } = contactDetails;
+
+    const res = await fetch("/api/v1/contactDetails", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        name,
+        email,
+        msg,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.status === 422 || !data) {
+      window.alert("Error Message sending");
+
+      console.log("Error Message sending");
+    } else {
+      window.alert("Message sent Successfully");
+
+      console.log("Message sent Successfully");
+
+      //history.pushState("")
+    }
+  };
+
   return (
     <>
       <Layout />
@@ -46,7 +95,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form action="" className="row justify-content-between">
+          <form method="POST" className="row justify-content-between">
             <div
               className="col-md-6 col-lg-6"
               data-aos="fade-up"
@@ -57,13 +106,27 @@ const Contact = () => {
                   <label for="name" className="ps-3 fw-bold mb-2">
                     Name
                   </label>
-                  <input type="text" className="form-control" id="name" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    value={contactDetails.name}
+                    onChange={handlerInputs}
+                  />
                 </div>
                 <div className="mb-3 col-lg-6">
                   <label for="email" className="ps-3 fw-bold mb-2">
                     Email
                   </label>
-                  <input type="email" className="form-control" id="email" />
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    value={contactDetails.email}
+                    onChange={handlerInputs}
+                  />
                 </div>
 
                 <div className="mb-3 col-lg-12">
@@ -71,11 +134,13 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
-                    name=""
                     id="message"
                     className="form-control"
                     cols="30"
                     rows="10"
+                    name="msg"
+                    value={contactDetails.msg}
+                    onChange={handlerInputs}
                   ></textarea>
                 </div>
 
@@ -84,6 +149,7 @@ const Contact = () => {
                     type="submit"
                     className="btn btn-primary text-white py-3"
                     value="Send Message"
+                    onClick={PostData}
                     bgwarning
                   />
                 </div>

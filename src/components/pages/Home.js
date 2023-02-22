@@ -107,66 +107,72 @@ const Home = () => {
               data-aos-delay="200"
             >
               <div className="features-slider" id="features-slider">
-                <div className="item">
-                  <div className="causes-item bg-white">
-                    <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
-                      <img
-                        src="images/img_v_1-min.jpg"
-                        alt="Load"
-                        className="img-fluid mb-4 rounded"
-                      />
-                    </a>
-                    <div className="px-4 pb-5 pt-3">
-                      <h3>
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="item">
+                      <div className="causes-item bg-white">
                         <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
-                          Recent
+                          <img
+                            src="images/img_v_1-min.jpg"
+                            alt="Load"
+                            className="img-fluid mb-4 rounded"
+                          />
                         </a>
-                      </h3>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta labore eligendi tempora laudantium voluptate,
-                        amet ad libero facilis nihil officiis.
-                      </p>
-                      <p>
-                        <a
-                          href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                          className="link-underline"
-                        >
-                          Learn More
-                        </a>
-                      </p>
+                        <div className="px-4 pb-5 pt-3">
+                          <h3>
+                            <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
+                              Recent
+                            </a>
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Soluta labore eligendi tempora laudantium
+                            voluptate, amet ad libero facilis nihil officiis.
+                          </p>
+                          <p>
+                            <a
+                              href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                              className="link-underline"
+                            >
+                              Learn More
+                            </a>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="item">
-                  <div className="causes-item bg-white">
-                    <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
-                      <img
-                        src="images/img_v_2-min.jpg"
-                        alt="Load"
-                        className="img-fluid mb-4 rounded"
-                      />
-                    </a>
-                    <div className="px-4 pb-5 pt-3">
-                      <h3>
+                  <div className="col-md-6">
+                    <div className="item">
+                      <div className="causes-item bg-white">
                         <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
-                          Upcoming
+                          <img
+                            src="images/img_v_2-min.jpg"
+                            alt="Load"
+                            className="img-fluid mb-4 rounded"
+                          />
                         </a>
-                      </h3>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Soluta labore eligendi tempora laudantium voluptate,
-                        amet ad libero facilis nihil officiis.
-                      </p>
-                      <p>
-                        <a
-                          href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
-                          className="link-underline"
-                        >
-                          Learn More
-                        </a>
-                      </p>
+                        <div className="px-4 pb-5 pt-3">
+                          <h3>
+                            <a href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6">
+                              Upcoming
+                            </a>
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Soluta labore eligendi tempora laudantium
+                            voluptate, amet ad libero facilis nihil officiis.
+                          </p>
+                          <p>
+                            <a
+                              href="https://www.youtube.com/watch?v=oEHHjs1UVXQ&list=PL4cUxeGkcC9iJ_KkrkBZWZRHVwnzLIoUE&index=6"
+                              className="link-underline"
+                            >
+                              Learn More
+                            </a>
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

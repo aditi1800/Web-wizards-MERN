@@ -4,7 +4,6 @@ import "./Layout.css";
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
-  const [logout, setLogout] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(`/getcookie`);

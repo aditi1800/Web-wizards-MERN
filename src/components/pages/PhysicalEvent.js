@@ -64,6 +64,7 @@ const PhysicalEvent = () => {
                         project_name={item.project_name}
                         location={item.location}
                         date={item.date}
+                        images={item.images}
                       />
                     ))}
                   <EventCard />

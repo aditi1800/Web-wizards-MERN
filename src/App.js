@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/events/:eventId" element={<EventDetails />} />
         <Route
           exact
-          path="/events/volunteerRegistration"
+          path="/events/volunteerRegistration/:eventId"
           element={<VolunteerRegistration />}
         />
         <Route exact path="/registerEvent" element={<RegisterEvent />} />

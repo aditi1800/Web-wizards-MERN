@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import PhysicalEvent from "./components/pages/PhysicalEvent";
 import EventDetails from "./components/pages/EventDetails";
 import RegisterEvent from "./components/pages/RegisterEvent";
+import VolunteerRegistration from "./components/pages/VolunteerRegistration";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import NoPage from "./components/pages/NoPage";
@@ -17,6 +18,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route exact path="/events" element={<PhysicalEvent />} />
         <Route exact path="/events/:eventId" element={<EventDetails />} />
+        <Route
+          exact
+          path="/events/volunteerRegistration"
+          element={<VolunteerRegistration />}
+        />
         <Route exact path="/registerEvent" element={<RegisterEvent />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />

@@ -1,6 +1,37 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Layout.css";
 const Layout = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [logout, setLogout] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(`/getcookie`);
+      const jsonData = await response.json();
+      if (response.ok) {
+        setData(jsonData);
+        console.log(data);
+        setIsLoading(false);
+        const userResponse = await fetch(`/userDetails/${data.jwtoken}`);
+        const userjsonData = await userResponse.json();
+        if (userResponse.ok) {
+          console.log(userjsonData);
+        }
+      }
+    };
+    fetchData();
+  }, []);
+
+  const LogoutHandler = async () => {
+    const response = await fetch(`/logout`);
+    if (response) {
+      window.alert("Logout Successful");
+      setData({ jwtoken: "" });
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <div className="site-mobile-menu site-navbar-target">
@@ -63,16 +94,27 @@ const Layout = () => {
                     <span></span>
                   </a>
 
-                  <Link to="/login">
+                  {!isLoading && data.jwtoken ? (
                     <button
                       type="button"
+                      style={{ color: "black" }}
                       className="call-us d-flex align-items-center btn btn-sm btn-warning pull-right registerButton"
+                      onClick={LogoutHandler}
                     >
-                      <Link style={{ color: "black" }} to="/login">
-                        Login/Register
-                      </Link>
+                      Logout
                     </button>
-                  </Link>
+                  ) : (
+                    <Link to="/login">
+                      <button
+                        type="button"
+                        className="call-us d-flex align-items-center btn btn-sm btn-warning pull-right registerButton"
+                      >
+                        <Link style={{ color: "black" }} to="/login">
+                          Login/Register
+                        </Link>
+                      </button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

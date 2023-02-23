@@ -12,7 +12,7 @@ const Signup = (props) => {
     cpassword: "",
     bu: "",
     gender: "",
-    empId: "",
+    employee_id: "",
   });
 
   let name, value;
@@ -28,9 +28,9 @@ const Signup = (props) => {
   const PostData = async (e) => {
     e.preventDefault();
 
-    const { name, email, phone, password, cpassword, bu, gender, empId } = user;
+    const { name, email, phone, password, cpassword, bu, gender, employee_id } = user;
 
-    const res = await fetch("/register", {
+    const res = await fetch("/signUpUser", {
       method: "POST",
 
       headers: {
@@ -49,7 +49,7 @@ const Signup = (props) => {
         cpassword,
         bu,
         gender,
-        empId,
+        employee_id,
       }),
     });
 
@@ -176,8 +176,8 @@ const Signup = (props) => {
                     type="number"
                     className="form-control"
                     id="exampleEmpIdNumber1"
-                    name="empId"
-                    value={user.empId}
+                    name="employee_id"
+                    value={user.employee_id}
                     onChange={handlerInputs}
                   />
                 </div>

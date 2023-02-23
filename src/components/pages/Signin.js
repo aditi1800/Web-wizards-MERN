@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
-const Signin = () => {
+const Signin = (props) => {
+  const navigate =  useNavigate();
   const [user, setUser] = useState({
     email: "",
 
@@ -17,7 +19,38 @@ const Signin = () => {
     setUser({ ...user, [name]: value });
   };
 
-  const PostData = () => {};
+  const PostData = async (e) => {
+    e.preventDefault();
+
+    const {email,  password } = user;
+
+    const res = await fetch("/loginUser", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.status === 422 || !data) {
+      window.alert("Invalid SignIn");
+
+      console.log("Invalid SignIn");
+    } else {
+      window.alert("Successfully SignIn");
+
+      console.log("Successfully SignIn");
+
+      navigate('/', {replace: true});
+    }
+  };
   return (
     <>
       <h2 className="form-title">Login</h2>

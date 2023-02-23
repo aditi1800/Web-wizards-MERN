@@ -9,7 +9,7 @@ const EventDetails = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`/events/${eventId}`);
+      const response = await fetch(`/v/project_view/${eventId}`);
       const jsonData = await response.json();
       if (response.ok) {
         setData(jsonData);
@@ -21,23 +21,7 @@ const EventDetails = () => {
 
   return (
     <>
-      <div>
-        {/* {!isLoading && (
-  
-            <div>
-  
-              <h2>{data.name}</h2>
-  
-              <p>{data.detail}</p>
-  
-              <img src={data.img} />
-  
-              <Link to="/">Back to homepage</Link>
-  
-            </div>
-  
-          )} */}
-      </div>
+      <div>{!isLoading && <></>}</div>
     </>
   );
 };
